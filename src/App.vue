@@ -1,16 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <h1>App Component</h1>
+  <input type="text" placeholder="say sumn" v-model="msg">
+  <Products :greeting="msg"/>
+  <Products greeting="class 1"/>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Products from './components/Products.vue';
+
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data(){
+    return{
+       msg: ''
+    }
+  },
+  components: {Products
+  },
+  
 }
 </script>
 
